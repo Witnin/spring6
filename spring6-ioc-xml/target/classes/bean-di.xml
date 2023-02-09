@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--set注入-->
+    <bean id="book" class="com.wsy.user.di.Book">
+        <property name="bAuthor" value="@within"/>
+        <property name="bName" value="SSM学习"/>
+<!--        <property name="others">-->
+<!--            <null/>-->
+<!--        </property>-->
+
+<!--        <property name="others" value="&lt;&gt;"/>-->
+        <property name="others">
+            <value><![CDATA[a < b]]]></value>
+        </property>
+    </bean>
+
+    <!--构造器注入-->
+    <bean id="bookCon" class="com.wsy.user.di.Book">
+        <constructor-arg name="bAuthor" value="@within2"/>
+        <constructor-arg name="bName" value="SSM学习"/>
+    </bean>
+
+
+
+</beans>

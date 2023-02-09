@@ -1,0 +1,4 @@
+2023-02-03 at 15:51:17 CST DEBUG org.springframework.context.support.AbstractApplicationContext 630 prepareRefresh - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@38f116f6
+2023-02-03 at 15:51:17 CST DEBUG org.springframework.beans.factory.xml.XmlBeanDefinitionReader 393 doLoadBeanDefinitions - Loaded 1 bean definitions from class path resource [bean.xml]
+2023-02-03 at 15:51:17 CST DEBUG org.springframework.beans.factory.support.DefaultSingletonBeanRegistry 225 getSingleton - Creating shared instance of singleton bean 'user'
+2023-02-03 at 15:51:17 CST DEBUG com.wsy.user.controller.UserControllerTest 30 testUserObject - ---执行成功---

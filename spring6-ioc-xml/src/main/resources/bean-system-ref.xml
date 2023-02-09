@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       https://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="deptP" class="com.wsy.system.entity.Dept" p:dName="开发部门" p:empList-ref="empList" p:lessonMap-ref="lessonMap">
+    </bean>
+
+    <bean id="dept" class="com.wsy.system.entity.Dept">
+        <property name="dName" value="研发部"/>
+        <property name="empList" ref="empList"/>
+        <property name="lessonMap" ref="lessonMap"/>
+    </bean>
+    <!--加上约束-->
+    <util:list id="empList">
+        <ref bean="emp1"/>
+        <ref bean="emp2"/>
+    </util:list>
+
+    <util:map id = "lessonMap">
+        <entry key="10010" value-ref="lesson1"/>
+        <entry key="10086" value-ref="lesson2"/>
+    </util:map>
+
+    <bean id="emp1" class="com.wsy.system.entity.Emp">
+        <property name="eName" value="wsy33"/>
+        <property name="age" value="18"/>
+
+    </bean>
+
+    <bean id="emp2" class="com.wsy.system.entity.Emp">
+        <property name="eName" value="wsy44"/>
+        <property name="age" value="20"/>
+
+    </bean>
+
+    <bean id="lesson1" class="com.wsy.system.entity.Lesson">
+        <property name="lessonName" value="语文"/>
+    </bean>
+
+    <bean id="lesson2" class="com.wsy.system.entity.Lesson">
+        <property name="lessonName" value="数学"/>
+    </bean>
+</beans>
