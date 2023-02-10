@@ -12,6 +12,7 @@
         <module>spring-first</module>
         <module>spring6-ioc-xml</module>
         <module>spring6-ioc-annotation</module>
+        <module>spring6-reflect</module>
     </modules>
 
     <properties>
@@ -61,6 +62,14 @@
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
             <version>2.1.1</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
