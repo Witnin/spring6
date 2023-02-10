@@ -3,6 +3,7 @@ package com.wsy.autowired.service.impl;
 import com.wsy.autowired.dao.UserDao;
 import com.wsy.autowired.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 
     @Autowired
+    @Qualifier("redisDaoImpl")
     private UserDao userDao;
 
 
