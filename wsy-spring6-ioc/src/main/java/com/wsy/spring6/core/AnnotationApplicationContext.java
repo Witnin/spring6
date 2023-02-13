@@ -17,7 +17,7 @@ import java.util.Map;
  */
 public class AnnotationApplicationContext implements ApplicationContext {
     //存储bean的容器
-    private HashMap<Class, Object> beanFactory = new HashMap<>();
+    private final HashMap<Class, Object> beanFactory = new HashMap<>();
     private static String rootPath;
 
     @Override
