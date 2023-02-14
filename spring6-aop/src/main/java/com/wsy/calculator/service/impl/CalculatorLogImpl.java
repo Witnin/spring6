@@ -18,6 +18,8 @@ public class CalculatorLogImpl implements Calculator {
 
         System.out.println("[日志] add 方法结束了，结果是：" + result);
 
+        System.out.println("-------------------------------------");
+
         return result;
     }
 
@@ -59,6 +61,7 @@ public class CalculatorLogImpl implements Calculator {
         System.out.println("方法内部 result = " + result);
 
         System.out.println("[日志] div 方法结束了，结果是：" + result);
+        System.out.println("-------------------------------------");
 
         return result;
     }
